@@ -7,21 +7,27 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9A44809F22BE900E002F5377 /* MainTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A44809E22BE900E002F5377 /* MainTableView.swift */; };
 		9AA19CB022BB1B5C0042369A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AA19CAF22BB1B5C0042369A /* AppDelegate.swift */; };
-		9AA19CB222BB1B5D0042369A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AA19CB122BB1B5D0042369A /* ViewController.swift */; };
 		9AA19CB522BB1B5D0042369A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9AA19CB322BB1B5D0042369A /* Main.storyboard */; };
 		9AA19CB722BB1B5E0042369A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9AA19CB622BB1B5E0042369A /* Assets.xcassets */; };
 		9AA19CBA22BB1B5E0042369A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9AA19CB822BB1B5E0042369A /* LaunchScreen.storyboard */; };
+		9AA19CC222BB1E7E0042369A /* MainTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AA19CC122BB1E7E0042369A /* MainTableViewController.swift */; };
+		9AA19CC622BB23C30042369A /* PageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AA19CC522BB23C30042369A /* PageViewController.swift */; };
+		9AA19CC822BB29B60042369A /* NestedTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AA19CC722BB29B60042369A /* NestedTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		9AA19CAC22BB1B5C0042369A /* TableViewDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TableViewDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		9A44809E22BE900E002F5377 /* MainTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTableView.swift; sourceTree = "<group>"; };
+		9AA19CAC22BB1B5C0042369A /* NestedTableViewDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NestedTableViewDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9AA19CAF22BB1B5C0042369A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		9AA19CB122BB1B5D0042369A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		9AA19CB422BB1B5D0042369A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		9AA19CB622BB1B5E0042369A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9AA19CB922BB1B5E0042369A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9AA19CBB22BB1B5E0042369A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9AA19CC122BB1E7E0042369A /* MainTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTableViewController.swift; sourceTree = "<group>"; };
+		9AA19CC522BB23C30042369A /* PageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageViewController.swift; sourceTree = "<group>"; };
+		9AA19CC722BB29B60042369A /* NestedTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NestedTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -38,7 +44,7 @@
 		9AA19CA322BB1B5C0042369A = {
 			isa = PBXGroup;
 			children = (
-				9AA19CAE22BB1B5C0042369A /* TableViewDemo */,
+				9AA19CAE22BB1B5C0042369A /* NestedTableViewDemo */,
 				9AA19CAD22BB1B5C0042369A /* Products */,
 			);
 			sourceTree = "<group>";
@@ -46,30 +52,33 @@
 		9AA19CAD22BB1B5C0042369A /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				9AA19CAC22BB1B5C0042369A /* TableViewDemo.app */,
+				9AA19CAC22BB1B5C0042369A /* NestedTableViewDemo.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		9AA19CAE22BB1B5C0042369A /* TableViewDemo */ = {
+		9AA19CAE22BB1B5C0042369A /* NestedTableViewDemo */ = {
 			isa = PBXGroup;
 			children = (
 				9AA19CAF22BB1B5C0042369A /* AppDelegate.swift */,
-				9AA19CB122BB1B5D0042369A /* ViewController.swift */,
+				9AA19CC122BB1E7E0042369A /* MainTableViewController.swift */,
+				9A44809E22BE900E002F5377 /* MainTableView.swift */,
+				9AA19CC522BB23C30042369A /* PageViewController.swift */,
+				9AA19CC722BB29B60042369A /* NestedTableViewController.swift */,
 				9AA19CB322BB1B5D0042369A /* Main.storyboard */,
 				9AA19CB622BB1B5E0042369A /* Assets.xcassets */,
 				9AA19CB822BB1B5E0042369A /* LaunchScreen.storyboard */,
 				9AA19CBB22BB1B5E0042369A /* Info.plist */,
 			);
-			path = TableViewDemo;
+			path = NestedTableViewDemo;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		9AA19CAB22BB1B5C0042369A /* TableViewDemo */ = {
+		9AA19CAB22BB1B5C0042369A /* NestedTableViewDemo */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 9AA19CBE22BB1B5E0042369A /* Build configuration list for PBXNativeTarget "TableViewDemo" */;
+			buildConfigurationList = 9AA19CBE22BB1B5E0042369A /* Build configuration list for PBXNativeTarget "NestedTableViewDemo" */;
 			buildPhases = (
 				9AA19CA822BB1B5C0042369A /* Sources */,
 				9AA19CA922BB1B5C0042369A /* Frameworks */,
@@ -79,9 +88,9 @@
 			);
 			dependencies = (
 			);
-			name = TableViewDemo;
+			name = NestedTableViewDemo;
 			productName = TableViewDemo;
-			productReference = 9AA19CAC22BB1B5C0042369A /* TableViewDemo.app */;
+			productReference = 9AA19CAC22BB1B5C0042369A /* NestedTableViewDemo.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -99,7 +108,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 9AA19CA722BB1B5C0042369A /* Build configuration list for PBXProject "TableViewDemo" */;
+			buildConfigurationList = 9AA19CA722BB1B5C0042369A /* Build configuration list for PBXProject "NestedTableViewDemo" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -112,7 +121,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				9AA19CAB22BB1B5C0042369A /* TableViewDemo */,
+				9AA19CAB22BB1B5C0042369A /* NestedTableViewDemo */,
 			);
 		};
 /* End PBXProject section */
@@ -135,8 +144,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9AA19CB222BB1B5D0042369A /* ViewController.swift in Sources */,
 				9AA19CB022BB1B5C0042369A /* AppDelegate.swift in Sources */,
+				9A44809F22BE900E002F5377 /* MainTableView.swift in Sources */,
+				9AA19CC822BB29B60042369A /* NestedTableViewController.swift in Sources */,
+				9AA19CC222BB1E7E0042369A /* MainTableViewController.swift in Sources */,
+				9AA19CC622BB23C30042369A /* PageViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -283,12 +295,12 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = TableViewDemo/Info.plist;
+				INFOPLIST_FILE = NestedTableViewDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.leiguang.TableViewDemo;
+				PRODUCT_BUNDLE_IDENTIFIER = com.leiguang.NestedTableViewDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -300,12 +312,12 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = TableViewDemo/Info.plist;
+				INFOPLIST_FILE = NestedTableViewDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.leiguang.TableViewDemo;
+				PRODUCT_BUNDLE_IDENTIFIER = com.leiguang.NestedTableViewDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -315,7 +327,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		9AA19CA722BB1B5C0042369A /* Build configuration list for PBXProject "TableViewDemo" */ = {
+		9AA19CA722BB1B5C0042369A /* Build configuration list for PBXProject "NestedTableViewDemo" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				9AA19CBC22BB1B5E0042369A /* Debug */,
@@ -324,7 +336,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		9AA19CBE22BB1B5E0042369A /* Build configuration list for PBXNativeTarget "TableViewDemo" */ = {
+		9AA19CBE22BB1B5E0042369A /* Build configuration list for PBXNativeTarget "NestedTableViewDemo" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				9AA19CBF22BB1B5E0042369A /* Debug */,

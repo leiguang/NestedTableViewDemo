@@ -2,6 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "self:TableViewDemo.xcodeproj">
+      location = "self:/Users/lg/Downloads/TableViewDemo/NestedTableViewDemo.xcodeproj">
    </FileRef>
 </Workspace>

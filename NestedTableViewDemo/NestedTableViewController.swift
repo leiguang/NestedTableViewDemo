@@ -10,6 +10,8 @@ import UIKit
 
 class NestedTableViewController: UITableViewController {
     
+    var isFingerTouching = false
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.keyboardDismissMode = .onDrag
@@ -33,14 +35,26 @@ class NestedTableViewController: UITableViewController {
         print("nested offset y: \(scrollView.contentOffset.y)")
         if MainTableViewController.nestedTableViewCanScroll {
             if scrollView.contentOffset.y < 0 {
-                MainTableViewController.mainTableViewCanScroll = true
-                MainTableViewController.nestedTableViewCanScroll = false
-                scrollView.contentOffset = .zero
+                if isFingerTouching {
+                    MainTableViewController.mainTableViewCanScroll = true
+                    MainTableViewController.nestedTableViewCanScroll = false
+                    scrollView.contentOffset = .zero
+                }
             } else {
                 MainTableViewController.mainTableViewCanScroll = false
             }
         } else {
             scrollView.contentOffset = .zero
         }
+    }
+    
+    // MARK: - Table view scroll delegate
+    
+    override func scrollViewWillBeginDragging(_ scrollView: UIScrollView) {
+        isFingerTouching = true
+    }
+    
+    override func scrollViewWillEndDragging(_ scrollView: UIScrollView, withVelocity velocity: CGPoint, targetContentOffset: UnsafeMutablePointer<CGPoint>) {
+        isFingerTouching = false
     }
 }

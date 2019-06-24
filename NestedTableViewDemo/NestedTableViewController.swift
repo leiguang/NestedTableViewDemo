@@ -13,8 +13,8 @@ class NestedTableViewController: UITableViewController {
     var isFingerTouching = false
     
     /// 控制 当nested table view已在顶部时，下滑nested table view，是否会把main table view也拉下来。
-    /// 若为true，则需要滑动时不松开手指 才能把main table view拉下来。
-    /// 若为false，则无论滑动时是否松开手指，都能把main table view拉下来。
+    /// 若为true，则需要滑动时不松开手指 才能把main table view拉下来。示例见 Resources/enable_finger_touching.gif
+    /// 若为false，则无论滑动时是否松开手指，都能把main table view拉下来。示例见 Resources/disable_finger_touching.gif
     /// 默认为false。
     var isFingerTouchingEnabled = false
     

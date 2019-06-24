@@ -10,12 +10,11 @@ import UIKit
 
 class MainTableViewController: UITableViewController {
 
-    static let searchBarHeight: CGFloat = 44
-    static let segmentControlHeight: CGFloat = 44
-    static var nestedTableViewHeight: CGFloat = 0
-    static var mainTableViewInitialContentOffsetY: CGFloat?
+    let searchBarHeight: CGFloat = 44
+    let segmentControlHeight: CGFloat = 44
+    var nestedTableViewHeight: CGFloat = 0
+    var mainTableViewInitialContentOffsetY: CGFloat?
     static var mainTableViewCanScroll: Bool = true
-    static var nestedTableViewCanScroll: Bool = false
 
     let pageViewControllerDataSources: [UIViewController] = zip((0...2), ["One", "Two", "Three"]).map { (index, title) in
         let vc = NestedTableViewController()
@@ -36,9 +35,9 @@ class MainTableViewController: UITableViewController {
     
     override func viewWillLayoutSubviews() {
         super.viewWillLayoutSubviews()
-        MainTableViewController.nestedTableViewHeight = UIScreen.main.bounds.height - view.safeAreaInsets.top -  MainTableViewController.segmentControlHeight
-        if MainTableViewController.mainTableViewInitialContentOffsetY == nil {
-            MainTableViewController.mainTableViewInitialContentOffsetY = tableView.contentOffset.y
+        nestedTableViewHeight = UIScreen.main.bounds.height - view.safeAreaInsets.top -  segmentControlHeight
+        if mainTableViewInitialContentOffsetY == nil {
+            mainTableViewInitialContentOffsetY = tableView.contentOffset.y
         }
     }
     
@@ -93,25 +92,25 @@ class MainTableViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        return MainTableViewController.segmentControlHeight
+        return segmentControlHeight
     }
     
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return MainTableViewController.nestedTableViewHeight
+        return nestedTableViewHeight
     }
     
     // MARK: - Table view scroll delegate
     
     override func scrollViewDidScroll(_ scrollView: UIScrollView) {
         print("main offset y: \(scrollView.contentOffset.y)")
-        let criticalOffsetY = MainTableViewController.searchBarHeight + (MainTableViewController.mainTableViewInitialContentOffsetY ?? 0)
+        let criticalOffsetY = searchBarHeight + (mainTableViewInitialContentOffsetY ?? 0)
         let criticalOffset = CGPoint(x: scrollView.contentOffset.x, y: criticalOffsetY)
         if scrollView.contentOffset.y > criticalOffsetY {
             scrollView.contentOffset = criticalOffset
-            MainTableViewController.nestedTableViewCanScroll = true
+            NestedTableViewController.nestedTableViewCanScroll = true
         } else {
             if MainTableViewController.mainTableViewCanScroll {
-                MainTableViewController.nestedTableViewCanScroll = false
+                NestedTableViewController.nestedTableViewCanScroll = false
             } else {
                 scrollView.contentOffset = criticalOffset
             }

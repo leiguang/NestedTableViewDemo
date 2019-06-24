@@ -10,6 +10,8 @@ import UIKit
 
 class NestedTableViewController: UITableViewController {
     
+    static var nestedTableViewCanScroll: Bool = false
+    
     var isFingerTouching = false
     
     /// 控制 当nested table view已在顶部时，下滑nested table view，是否会把main table view也拉下来。
@@ -39,11 +41,11 @@ class NestedTableViewController: UITableViewController {
     
     override func scrollViewDidScroll(_ scrollView: UIScrollView) {
         print("nested offset y: \(scrollView.contentOffset.y)")
-        if MainTableViewController.nestedTableViewCanScroll {
+        if NestedTableViewController.nestedTableViewCanScroll {
             if scrollView.contentOffset.y < 0 {
                 if !isFingerTouchingEnabled || (isFingerTouchingEnabled && isFingerTouching) {
                     MainTableViewController.mainTableViewCanScroll = true
-                    MainTableViewController.nestedTableViewCanScroll = false
+                    NestedTableViewController.nestedTableViewCanScroll = false
                     scrollView.contentOffset = .zero
                 }
             } else {
